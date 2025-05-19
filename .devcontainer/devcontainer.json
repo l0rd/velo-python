@@ -72,5 +72,6 @@
 	"onCreateCommand": "bash .devcontainer/scripts/onCreateCommand.sh",
 	"postStartCommand": "bash .devcontainer/scripts/postStartCommand.sh",
 	// Comment out connect as root instead. More info: https://aka.ms/vscode-remote/containers/non-root.
-	"remoteUser": "vscode"
+	"remoteUser": "vscode",
+	"mounts": ["source=/run/user/2000/podman/podman.sock,target=/var/run/docker.sock,type=bind"]
 }
